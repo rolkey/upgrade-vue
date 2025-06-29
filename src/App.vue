@@ -46,7 +46,6 @@ let selectedFile = ref(null);
 const fetchUpgrades = async () => {
   const response = await fetch(`${serverPath}/upgrades`);
   upgrades.value = await response.json();
-  console.log("版本信息", upgrades.value);
 };
 
 const handleFileUpload = (event) => {
